@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --forest: #06241A;
+  --forest-mid: #0B3326;
+  --noir: #0A0A0A;
+  --gold: #D4AF37;
+  --gold-light: #E8C766;
+  --terre: #4A3223;
+  --terre-light: #7A5A3E;
+  --cream: #F5EEDC;
+  --cream-muted: #CBBFA6;
+}
+
+@theme inline {
+  --color-forest: var(--forest);
+  --color-forest-mid: var(--forest-mid);
+  --color-noir: var(--noir);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-terre: var(--terre);
+  --color-terre-light: var(--terre-light);
+  --color-cream: var(--cream);
+  --color-cream-muted: var(--cream-muted);
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+  overflow-x: hidden;
+}
+
+body {
+  background: #06241A;
+  color: #F5EEDC;
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.015em;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #06241A;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 3px;
+}
+
+::selection {
+  background: #D4AF37;
+  color: #06241A;
+}
+
+*:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
