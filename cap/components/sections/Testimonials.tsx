@@ -1,13 +1,7 @@
 "use client";
-import Image from "next/image";
 import { motion } from "motion/react";
+import { User } from "lucide-react";
 import { testimonials } from "@/data/testimonials";
-
-const avatars = [
-  "/enfance.jpg",
-  "/education.jpg",
-  "/leadership.jpg",
-];
 
 export function Testimonials() {
   return (
@@ -54,14 +48,8 @@ export function Testimonials() {
               <div className="h-px bg-[#D4AF37]/30 mb-5" />
 
               <div className="flex items-center gap-3">
-                <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-[#D4AF37]/50 shrink-0">
-                  <Image
-                    src={avatars[i % avatars.length]}
-                    alt={t.author}
-                    fill
-                    sizes="40px"
-                    className="object-cover"
-                  />
+                <div className="w-10 h-10 rounded-full bg-[#06241A]/10 border-2 border-[#D4AF37]/50 flex items-center justify-center text-[#06241A] shrink-0">
+                  <User className="w-5 h-5" />
                 </div>
                 <div>
                   <p className="text-[#06241A] font-sans font-semibold text-sm">{t.author}</p>

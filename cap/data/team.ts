@@ -4,31 +4,30 @@ export interface TeamMember {
   image: string;
 }
 
-// Données factices — à remplacer par les vrais membres
 export const team: TeamMember[] = [
   {
-    name: "Membre à définir",
-    role: "Président(e)",
-    image: "/images/team/membre-1.jpg",
+    name: "YOVO Komivi Mawudem",
+    role: "Président",
+    image: "/membres/president.png",
   },
   {
-    name: "Membre à définir",
-    role: "Secrétaire Général(e)",
-    image: "/images/team/membre-2.jpg",
+    name: "KUAOVI Ohini",
+    role: "Chargé d'organisation",
+    image: "/membres/charged'organisation.png",
   },
   {
-    name: "Membre à définir",
-    role: "Trésorier(ère)",
-    image: "/images/team/membre-3.jpg",
+    name: "LOGOSSOU Kossiwa Claire",
+    role: "Trésorière",
+    image: "/membres/tresoriere.png",
   },
   {
-    name: "Membre à définir",
-    role: "Chargé(e) de l'organisation",
-    image: "/images/team/membre-4.jpg",
+    name: "TOURE-PEGNOUGO Patricia",
+    role: "Secrétaire Générale",
+    image: "/membres/secretaire_generale.png",
   },
   {
-    name: "Membre à définir",
-    role: "Chargé(e) de communication",
-    image: "/images/team/membre-5.jpg",
+    name: "TAKPA Komitse",
+    role: "Chargé de communication",
+    image: "/membres/chargedecom.png",
   },
 ];

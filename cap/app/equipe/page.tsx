@@ -4,14 +4,6 @@ import { team } from "@/data/team";
 
 export const metadata: Metadata = { title: "Équipe — CAP CONSCIENT" };
 
-const images = [
-  "/leadership.jpg",
-  "/formationp.jpg",
-  "/santeprimaire.jpg",
-  "/autonomisation.jpg",
-  "/education.jpg",
-];
-
 export default function EquipePage() {
   return (
     <>
@@ -25,12 +17,18 @@ export default function EquipePage() {
       <section className="bg-[#F5EEDC] py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-            {team.map((member, i) => (
-              <div key={i} className="flex flex-col items-center text-center">
+            {team.map((member) => (
+              <div key={member.name} className="flex flex-col items-center text-center">
                 <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-[#D4AF37]/30 mb-4 shadow-lg">
-                  <Image src={images[i] || "/images/hero/hero-1.jpg"} alt={member.name} fill sizes="128px" className="object-cover" />
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    sizes="128px"
+                    className="object-cover object-top"
+                  />
                 </div>
-                <h3 className="font-serif text-lg text-[#06241A] mb-1">{member.name}</h3>
+                <h3 className="font-serif text-lg text-[#06241A] mb-1 leading-snug">{member.name}</h3>
                 <p className="text-[#7A5A3E] font-sans text-sm">{member.role}</p>
               </div>
             ))}

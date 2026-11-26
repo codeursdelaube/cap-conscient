@@ -4,14 +4,6 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { team } from "@/data/team";
 
-const images = [
-  "/leadership.jpg",
-  "/formationp.jpg",
-  "/santeprimaire.jpg",
-  "/autonomisation.jpg",
-  "/education.jpg",
-];
-
 export function TeamSection() {
   return (
     <section className="bg-[#F5EEDC] py-20 md:py-28 overflow-hidden">
@@ -23,26 +15,26 @@ export function TeamSection() {
           </h2>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-          {team.slice(0, 4).map((member, i) => (
+        <div className="flex flex-wrap justify-center gap-8 md:gap-10">
+          {team.map((member, i) => (
             <motion.div
-              key={i}
+              key={member.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex flex-col items-center text-center group"
+              className="flex flex-col items-center text-center group w-40 md:w-44"
             >
               <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-4 border-transparent group-hover:border-[#D4AF37] transition-all duration-300 shadow-lg mb-4">
                 <Image
-                  src={images[i] || "/images/hero/hero-1.jpg"}
+                  src={member.image}
                   alt={member.name}
                   fill
                   sizes="144px"
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
-              <h3 className="font-serif text-lg text-[#06241A] mb-1">{member.name}</h3>
+              <h3 className="font-serif text-base md:text-lg text-[#06241A] mb-1 leading-snug">{member.name}</h3>
               <p className="text-[#7A5A3E] font-sans text-sm">{member.role}</p>
             </motion.div>
           ))}
