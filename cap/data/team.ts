@@ -11,9 +11,9 @@ export const team: TeamMember[] = [
     image: "/membres/president.png",
   },
   {
-    name: "KUAOVI Ohini",
-    role: "Chargé d'organisation",
-    image: "/membres/charged'organisation.png",
+    name: "TOURE-PEGNOUGO Patricia",
+    role: "Secrétaire Générale",
+    image: "/membres/secretaire_generale.png",
   },
   {
     name: "LOGOSSOU Kossiwa Claire",
@@ -21,13 +21,13 @@ export const team: TeamMember[] = [
     image: "/membres/tresoriere.png",
   },
   {
-    name: "TOURE-PEGNOUGO Patricia",
-    role: "Secrétaire Générale",
-    image: "/membres/secretaire_generale.png",
+    name: "KUAOVI Ohini",
+    role: "Chargé de l'Organisation",
+    image: "/membres/charged'organisation.png",
   },
   {
     name: "TAKPA Komitse",
-    role: "Chargé de communication",
+    role: "Chargé de Communication",
     image: "/membres/chargedecom.png",
   },
 ];
